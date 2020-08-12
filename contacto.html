@@ -1,0 +1,27 @@
+<!DOCTYPE html >
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title> Incrustar estilos</title>
+		<link rel="stylesheet" href="estilophp.css" type="text/css"/>			
+	</head>
+	<body>
+		<h1 > Calculadora</h1>
+		<h3 > Introduce los valores y seleccione la operación a realizar</h3>
+		<form name="datos" action="index.php" method="post">
+			<label> Operador 1</label>
+			<input type="number" name="O1"  min="1" max="100"/> <br/>
+			<label>Operador 2</label> 
+			<input type="number" name="O2"  min="1" max="100"/> <br/>
+
+			<input type="submit" name="operacion" value="+" />
+			<input type="submit" name="operacion" value="-" />
+			<input type="submit" name="operacion" value="*" />
+			<input type="submit" name="operacion" value="/" />
+		</form>
+			<?php
+				if(isset($_POST['operacion']))
+					echo $res;
+			?>
+	</body>
+</html>
